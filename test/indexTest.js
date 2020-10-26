@@ -8,10 +8,13 @@ const babel = require('babel-core');
 const js = fs.readFileSync(path.resolve(__dirname, '..', 'index.js'), 'utf-8')
 
 
+//This example shows that the test expects companyName to equal Scuber. That expect and to.equal are essentially doing the same thing as companyName == 'Scuber'.
+//describe is a function provided by our test library, Mocha, and it's used to hold our tests. After the word describe is information about our tests.
 
 describe('index.js', function () {
   describe('companyName', function () {
     it('is set as Scuber', function () {
+      //test is below 
       expect(companyName).to.equal('Scuber');
     });
 
